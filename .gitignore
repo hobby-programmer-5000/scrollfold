@@ -1,0 +1,16 @@
+# split results
+output/
+
+# agent notes kept local (accounts, local paths, progress)
+CLAUDE.local.md
+PROGRESS.md
+
+# build output
+build/
+dist/
+*.spec
+
+# Python
+.venv/
+__pycache__/
+*.pyc
