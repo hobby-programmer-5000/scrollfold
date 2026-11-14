@@ -19,6 +19,7 @@ const state = {
 function applyLang() {
   document.documentElement.lang = state.lang;
   for (const el of document.querySelectorAll("[data-i18n]")) el.textContent = t(state.lang, el.dataset.i18n);
+  $("repo-link").title = t(state.lang, "repo_title");
   $("lang-btn").textContent = t(state.lang, "lang");
   $("mode").textContent = t(state.lang, state.server ? "mode_server" : "mode_static");
   $("save").textContent = t(state.lang, state.server ? "save_server" : "save_zip");
