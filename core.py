@@ -93,16 +93,16 @@ def split_image(img: Image.Image, count: int) -> list[Image.Image]:
 # Width:height of one strip, from measured X posts (see reference.md).
 # X shows each image at its own ratio inside a card at most ~335 px wide and ~700 px tall (desktop),
 # so 1:2 fills the card (largest strip in the feed); 1:12 gives the thin "slats" look.
-# None keeps the source as it is.
+# None keeps the source as it is; it is the default and listed first, so nothing has to be chosen up front.
 RATIOS: dict[str, tuple[int, int] | None] = {
+    "original": None,
     "1:2": (1, 2),
     "9:16": (9, 16),
     "3:4": (3, 4),
     "1:1": (1, 1),
     "1:12": (1, 12),
-    "original": None,
 }
-DEFAULT_RATIO = "1:2"
+DEFAULT_RATIO = "original"
 LARGE_WARN_PIXELS = 100_000_000   # warn above 100 MP: slow, lots of memory
 FIT_MODES = ("crop", "blur", "black", "white")
 DEFAULT_FIT = "crop"

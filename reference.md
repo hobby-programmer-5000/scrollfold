@@ -125,7 +125,7 @@ We looked at these to choose ratios only; none of their images are copied or sto
 - Popular uploads use the full **4096 px** long side (X's maximum); smaller strips look soft when opened.
 - Ideas not built (yet): uneven strip widths (HazoZOYAKU), flip-book frame sequences (someki_noi).
 
-→ Presets: 1:2 (default), 9:16, 3:4, 1:1, 1:12, Source.
+→ Presets: Source (default, splits the image as is), 1:2, 9:16, 3:4, 1:1, 1:12.
 
 ## Sample image
 

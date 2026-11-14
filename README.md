@@ -11,7 +11,7 @@ X now allows 20 images per post, and people started posting one picture cut into
 ## Features
 
 - Strip count 1–20. **Auto** picks the count that best matches the image for the chosen strip ratio.
-- **Strip ratio** presets measured from real X posts (see [reference.md](reference.md)): **1:2** (default, fills the biggest card), 9:16, 3:4, 1:1, **1:12** (thin slats) or Source.
+- **Strip ratio** presets measured from real X posts (see [reference.md](reference.md)): **Source** (default: the image is split as is, nothing to choose), **1:2** (fills the biggest card), 9:16, 3:4, 1:1 or **1:12** (thin slats).
 - **If it doesn't fit**: Crop (keeps the center, status shows how much is kept) or Pad with a blurred copy, black or white. The picture is never stretched.
 - Two scrollable panes: the source with red strip borders, and the strips laid out side by side with gaps. Zoom: Fit, 10–200%.
 - **Optimize for X**: each strip becomes a JPEG with the long side ≤ 4096 px and ≤ 5 MB. Off: lossless PNG.

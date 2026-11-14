@@ -82,7 +82,7 @@ class DesktopFlows(unittest.TestCase):
     # ---------------------------------------------------------- normal use
     def test_auto_count_and_korean(self):
         self.app.load(SAMPLES / "by-shape" / "panorama-10x1_for-1-2.jpg")
-        self.assertEqual(self.app.count.get(), 20)  # 10:1 with 1:2 strips
+        self.assertEqual(self.app.count.get(), 20)  # default ratio is the source: 20 strips
         self.app.toggle_lang()
         self.assertIn("조각 20개", self.app.status.get())
         self.assertEqual(self.app.b_save.cget("text"), "분할하고 저장")
