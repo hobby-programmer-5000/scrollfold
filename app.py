@@ -457,7 +457,10 @@ class App:
         self.set_status(msg)
 
     def _on_resize(self, event):
-        if event.widget is self.root and self.zoom_box.current() <= 0:
+        # The canvases count too: at startup they get their real size only after the first draw,
+        # and dragging the divider between the panes resizes them without resizing the window.
+        watched = (self.root, self.src_view.canvas, self.prev_view.canvas)
+        if any(event.widget is w for w in watched) and self.zoom_box.current() <= 0:
             if self._resize_job:
                 self.root.after_cancel(self._resize_job)
             self._resize_job = self.root.after(200, self.redraw)
